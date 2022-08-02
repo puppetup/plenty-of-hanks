@@ -6,9 +6,37 @@
         "lastName": "Rodriguez",
         "email": "rodri237@gmail.com",
         "password": "password123"
-        ""
-
-    
-
-
+    },
+    {
+        "_id": 2,
+        "userName": "Marvin",
+        "firstName": "Marvin",
+        "lastName": "Santiago",
+        "email": "marvinsntglpz@gmail.com",
+        "password": "password123"
+    },
+    {
+        "_id": 3,
+        "userName": "Jordan",
+        "firstName": "Jordan",
+        "lastName": "Scheringer",
+        "email": "schneringerj@gmail.com",
+        "password": "password123"
+    },
+    {
+        "_id": 4,
+        "userName": "Jon",
+        "firstName": "ZhiChong",
+        "lastName": "Zheng",
+        "email": "jonheng@gmail.com",
+        "password": "password123"
+    },
+    {
+        "_id": 5,
+        "userName": "Savino",
+        "firstName": "Savino",
+        "lastName": "Hoshizaki",
+        "email": "savinohoshizaki@gmail.com",
+        "password": "password123"
+    }
 ]
