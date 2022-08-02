@@ -1,0 +1,122 @@
+[
+    {
+        "_id": "1",
+        "movieName": "Splash",
+        "yearReleased": 1984,
+        "imageLink": "Splash.jpg"
+    },
+    {
+        "_id": "2",
+        "Movie": "Big",
+        "yearReleased": 1988,
+        "imageLink": null
+    },
+    {
+        "_id": "3",
+        "Movie": "Joe Vs The Volcano",
+        "yearReleased": 1990,
+        "imageLink": null
+    },
+    {
+        "_id": "4",
+        "Movie": "Sleepless in Seattle",
+        "yearReleased": 1990,
+        "imageLink": null
+    },
+    {
+        "_id": "5",
+        "Movie": "Forrest Gump",
+        "yearReleased": 1993,
+        "imageLink": null
+    },
+    {
+        "_id": "6",
+        "Movie": "Forrest Gump",
+        "yearReleased": 1994,
+        "imageLink": null
+    },
+    {
+        "_id": "7",
+        "Movie": "Toy Story (Series)",
+        "yearReleased": 1995,
+        "imageLink": null
+    },
+    {
+        "_id": "8",
+        "Movie": "That Thing You Do!",
+        "yearReleased": 1995,
+        "imageLink": null
+    },
+    {
+        "_id": "9",
+        "Movie": "Saving Private Ryan",
+        "yearReleased": 1996,
+        "imageLink": null
+    },
+    {
+        "_id": "10",
+        "Movie": "The Green Mile",
+        "yearReleased": 1998,
+        "imageLink": null
+    },
+    {
+        "_id": "11",
+        "Movie": "Cast Away",
+        "yearReleased": 2000,
+        "imageLink": null
+    },
+    {
+        "_id": "12",
+        "Movie": "Catch Me if You Can",
+        "yearReleased": 2002,
+        "imageLink": null
+    },
+    {
+        "_id": "13",
+        "Movie": "The Terminal",
+        "yearReleased": 2004,
+        "imageLink": null
+    },
+    {
+        "_id": "14",
+        "Movie": "The Da Vinci Code (Series)",
+        "yearReleased": 2006,
+        "imageLink": null
+    },
+    {
+        "_id": "15",
+        "Movie": "Extremely Loud & Incredibly Close",
+        "yearReleased": 2011,
+        "imageLink": null
+    },
+    {
+        "_id": "16",
+        "Movie": "Captain Phillips",
+        "yearReleased": 2013,
+        "imageLink": null
+    },
+    {
+        "_id": "17",
+        "Movie": "Saving Mr. Banks",
+        "yearReleased": 2013,
+        "imageLink": null
+    },
+    {
+        "_id": "18",
+        "Movie": "Sully",
+        "yearReleased": 2016,
+        "imageLink": null
+    },
+    {
+        "_id": "19",
+        "Movie": "The Post",
+        "yearReleased": 2017,
+        "imageLink": null
+    },
+    {
+        "_id": "20",
+        "Movie": "A Beautiful Day in the Neighborhood",
+        "yearReleased": 2019,
+        "imageLink": null
+    }
+]
