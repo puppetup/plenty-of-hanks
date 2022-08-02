@@ -1,4 +1,4 @@
 const Movies = require('./Movies');
-const Matchup = require('./Matchup');
+const User = require('./User');
 
-module.exports = { Movies, Matchup };
+module.exports = { Movies, User };
