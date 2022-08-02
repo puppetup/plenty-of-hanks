@@ -5,23 +5,20 @@ const typeDefs = gql`
     username: String!
     email: String
     password: String
-    savedBooks: [Book]
-    Movie1: Movies
-    Movie2: Movies
-    Movie3: Movies
-    Movie4: Movies
-    Movie5: Movies
+    movies: [Movie]
   }
   type Movie {
     movieName: String
-    yearReleased: number
-    imageLink: link
+    yearReleased: Int
+    imageLink: String
   }
-  type Query {
+  type Auth {
+    token: ID!
     user: User
   }
   type Query {
     movie: Movie
+    me: User
   }
 
   type Mutation {

@@ -2,7 +2,7 @@ const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
 // import schema from Book.js
-const Movies = require("./Movies");
+const Movie = require("./Movie");
 
 const userSchema = new Schema(
   {
@@ -21,11 +21,12 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    Movie1: Movies,
-    Movie2: Movies,
-    Movie3: Movies,
-    Movie4: Movies,
-    Movie5: Movies,
+    movies: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Movie",
+        }
+    ]
     },
   // set this to use virtual below
   {

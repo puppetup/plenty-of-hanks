@@ -7,7 +7,7 @@ const movieSchema = new Schema(
       required: true
     },
     yearReleased: {
-      type: number,
+      type: Number,
       required: true
     },
     imageLink: {
