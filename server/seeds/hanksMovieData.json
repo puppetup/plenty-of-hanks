@@ -3,7 +3,7 @@
         "_id": "1",
         "movieName": "Splash",
         "yearReleased": 1984,
-        "imageLink": null
+        "imageLink": "./images"
     },
     {
         "_id": "2",
