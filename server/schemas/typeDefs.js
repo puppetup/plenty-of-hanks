@@ -15,7 +15,7 @@ const typeDefs = gql`
   type Movie {
     movieName: String
     yearReleased: number
-    imageLink: String
+    imageLink: link
   }
   type Query {
     user: User
