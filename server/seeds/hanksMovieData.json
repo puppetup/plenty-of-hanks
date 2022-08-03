@@ -5,103 +5,103 @@
         "imageLink": "Splash.jpg"
     },
     {
-        "Movie": "Big",
+        "movieName": "Big",
         "yearReleased": 1988,
         "imageLink": "Big.jpg"
     },
     {
-        "Movie": "Joe Vs The Volcano",
+        "movieName": "Joe Vs The Volcano",
         "yearReleased": 1990,
         "imageLink": "joevsthevolcano.jpg"
     },
     {
-        "Movie": "Sleepless in Seattle",
+        "movieName": "Sleepless in Seattle",
         "yearReleased": 1990,
         "imageLink": "sleeplessinseattle.jpg"
     },
     {
-        "Movie": "Forrest Gump",
+        "movieName": "Forrest Gump",
         "yearReleased": 1993,
         "imageLink": "Forrestgump.jpg"
     },
     {
-        "Movie": "Toy Story (Series)",
+        "movieName": "Toy Story (Series)",
         "yearReleased": 1995,
         "imageLink": "toystory.jpeg"
     },
     {
-        "Movie": "That Thing You Do!",
+        "movieName": "That Thing You Do!",
         "yearReleased": 1995,
         "imageLink": "thatthingyoudo.jpg"
     },
     {
-        "Movie": "Saving Private Ryan",
+        "movieName": "Saving Private Ryan",
         "yearReleased": 1996,
         "imageLink": "savingprivateryan.jpg"
     },
     {
 
-        "Movie": "The Green Mile",
+        "movieName": "The Green Mile",
         "yearReleased": 1998,
         "imageLink": "thegreenmile.jpg"
     },
     {
 
-        "Movie": "Cast Away",
+        "movieName": "Cast Away",
         "yearReleased": 2000,
         "imageLink": "castaway.jpg"
     },
     {
 
-        "Movie": "Catch Me if You Can",
+        "movieName": "Catch Me if You Can",
         "yearReleased": 2002,
         "imageLink": "catchmeifyoucan.jpg"
     },
     {
 
-        "Movie": "The Terminal",
+        "movieName": "The Terminal",
         "yearReleased": 2004,
         "imageLink": "theterminal.jpg"
     },
     {
 
-        "Movie": "The Da Vinci Code (Series)",
+        "movieName": "The Da Vinci Code (Series)",
         "yearReleased": 2006,
         "imageLink": "thedavincicode.jpg"
     },
     {
 
-        "Movie": "Extremely Loud & Incredibly Close",
+        "movieName": "Extremely Loud & Incredibly Close",
         "yearReleased": 2011,
         "imageLink": "extremely_load_andincredibly_close.jpg"
     },
     {
 
-        "Movie": "Captain Phillips",
+        "movieName": "Captain Phillips",
         "yearReleased": 2013,
         "imageLink": "captainphillips.jpg"
     },
     {
 
-        "Movie": "Saving Mr. Banks",
+        "movieName": "Saving Mr. Banks",
         "yearReleased": 2013,
         "imageLink": "saving-mr-banks.jpg"
     },
     {
 
-        "Movie": "Sully",
+        "movieName": "Sully",
         "yearReleased": 2016,
         "imageLink": "sully.jpg"
     },
     {
 
-        "Movie": "The Post",
+        "movieName": "The Post",
         "yearReleased": 2017,
         "imageLink": "the_post.jpg"
     },
     {
 
-        "Movie": "A Beautiful Day in the Neighborhood",
+        "movieName": "A Beautiful Day in the Neighborhood",
         "yearReleased": 2019,
         "imageLink": "a_beautiful_day_in_the_neighborhood.jpg"
     }

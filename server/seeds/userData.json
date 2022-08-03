@@ -5,7 +5,14 @@
         "firstName": "David",
         "lastName": "Rodriguez",
         "email": "rodri237@gmail.com",
-        "password": "password123"
+        "password": "password123",
+        "movies": [
+            "Joe Vs The Volcano",
+            "Forrest Gump",
+            "Sleepless in Seattle",
+            "Big",
+            "That Thing You Do!"
+        ]
     },
     {
         "_id": 2,
@@ -13,7 +20,14 @@
         "firstName": "Marvin",
         "lastName": "Santiago",
         "email": "marvinsntglpz@gmail.com",
-        "password": "password123"
+        "password": "password123",
+        "movies": [
+            "The Da Vinci Code (Series)",
+            "Forrest Gump",
+            "Toy Story (Series)",
+            "Captain Phillips",
+            "Apollo 13"
+        ]
     },
     {
         "_id": 3,
@@ -21,7 +35,14 @@
         "firstName": "Jordan",
         "lastName": "Scheringer",
         "email": "schneringerj@gmail.com",
-        "password": "password123"
+        "password": "password123",
+        "movies": [
+            "The Green Mile",
+            "Big",
+            "Cast Away",
+            "Saving Private Ryan",
+            "Sleepless in Seattle"
+        ]
     },
     {
         "_id": 4,
@@ -29,7 +50,14 @@
         "firstName": "ZhiChong",
         "lastName": "Zheng",
         "email": "jonheng@gmail.com",
-        "password": "password123"
+        "password": "password123",
+        "movies": [
+            "Forrest Gump",
+            "Apollo 13",
+            "Captain Phillips",
+            "Catch Me if You Can",
+            "Sully"
+        ]
     },
     {
         "_id": 5,
@@ -37,6 +65,13 @@
         "firstName": "Savino",
         "lastName": "Hoshizaki",
         "email": "savinohoshizaki@gmail.com",
-        "password": "password123"
+        "password": "password123",
+        "movies": [
+            "Joe Vs The Volcano",
+            "Forrest Gump",
+            "Sleepless in Seattle",
+            "Big",
+            "That Thing You Do!"
+        ]
     }
 ]

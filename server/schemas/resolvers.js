@@ -1,5 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User } = require('../models');
+const { Movie } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -12,6 +13,17 @@ const resolvers = {
       }
 
       throw new AuthenticationError('Not logged in');
+    },
+  },
+  Query: {
+    movies: async (parent, args) => {
+     
+        const movieData = await Movie.find({});
+
+        return movieData;
+      
+
+     // throw new AuthenticationError('Not logged in');
     },
   },
 
