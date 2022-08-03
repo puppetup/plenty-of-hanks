@@ -1,122 +1,108 @@
 [
     {
-        "_id": "1",
         "movieName": "Splash",
         "yearReleased": 1984,
         "imageLink": "Splash.jpg"
     },
     {
-        "_id": "2",
-        "Movie": "Big",
+        "movieName": "Big",
         "yearReleased": 1988,
-        "imageLink": null
+        "imageLink": "Big.jpg"
     },
     {
-        "_id": "3",
-        "Movie": "Joe Vs The Volcano",
+        "movieName": "Joe Vs The Volcano",
         "yearReleased": 1990,
-        "imageLink": null
+        "imageLink": "joevsthevolcano.jpg"
     },
     {
-        "_id": "4",
-        "Movie": "Sleepless in Seattle",
+        "movieName": "Sleepless in Seattle",
         "yearReleased": 1990,
-        "imageLink": null
+        "imageLink": "sleeplessinseattle.jpg"
     },
     {
-        "_id": "5",
-        "Movie": "Forrest Gump",
+        "movieName": "Forrest Gump",
         "yearReleased": 1993,
-        "imageLink": null
+        "imageLink": "Forrestgump.jpg"
     },
     {
-        "_id": "6",
-        "Movie": "Forrest Gump",
-        "yearReleased": 1994,
-        "imageLink": null
-    },
-    {
-        "_id": "7",
-        "Movie": "Toy Story (Series)",
+        "movieName": "Toy Story (Series)",
         "yearReleased": 1995,
-        "imageLink": null
+        "imageLink": "toystory.jpeg"
     },
     {
-        "_id": "8",
-        "Movie": "That Thing You Do!",
+        "movieName": "That Thing You Do!",
         "yearReleased": 1995,
-        "imageLink": null
+        "imageLink": "thatthingyoudo.jpg"
     },
     {
-        "_id": "9",
-        "Movie": "Saving Private Ryan",
+        "movieName": "Saving Private Ryan",
         "yearReleased": 1996,
-        "imageLink": null
+        "imageLink": "savingprivateryan.jpg"
     },
     {
-        "_id": "10",
-        "Movie": "The Green Mile",
+
+        "movieName": "The Green Mile",
         "yearReleased": 1998,
-        "imageLink": null
+        "imageLink": "thegreenmile.jpg"
     },
     {
-        "_id": "11",
-        "Movie": "Cast Away",
+
+        "movieName": "Cast Away",
         "yearReleased": 2000,
-        "imageLink": null
+        "imageLink": "castaway.jpg"
     },
     {
-        "_id": "12",
-        "Movie": "Catch Me if You Can",
+
+        "movieName": "Catch Me if You Can",
         "yearReleased": 2002,
-        "imageLink": null
+        "imageLink": "catchmeifyoucan.jpg"
     },
     {
-        "_id": "13",
-        "Movie": "The Terminal",
+
+        "movieName": "The Terminal",
         "yearReleased": 2004,
-        "imageLink": null
+        "imageLink": "theterminal.jpg"
     },
     {
-        "_id": "14",
-        "Movie": "The Da Vinci Code (Series)",
+
+        "movieName": "The Da Vinci Code (Series)",
         "yearReleased": 2006,
-        "imageLink": null
+        "imageLink": "thedavincicode.jpg"
     },
     {
-        "_id": "15",
-        "Movie": "Extremely Loud & Incredibly Close",
+
+        "movieName": "Extremely Loud & Incredibly Close",
         "yearReleased": 2011,
-        "imageLink": null
+        "imageLink": "extremely_load_andincredibly_close.jpg"
     },
     {
-        "_id": "16",
-        "Movie": "Captain Phillips",
+
+        "movieName": "Captain Phillips",
         "yearReleased": 2013,
-        "imageLink": null
+        "imageLink": "captainphillips.jpg"
     },
     {
-        "_id": "17",
-        "Movie": "Saving Mr. Banks",
+
+        "movieName": "Saving Mr. Banks",
         "yearReleased": 2013,
-        "imageLink": null
+        "imageLink": "saving-mr-banks.jpg"
     },
     {
-        "_id": "18",
-        "Movie": "Sully",
+
+        "movieName": "Sully",
         "yearReleased": 2016,
-        "imageLink": null
+        "imageLink": "sully.jpg"
     },
     {
-        "_id": "19",
-        "Movie": "The Post",
+
+        "movieName": "The Post",
         "yearReleased": 2017,
-        "imageLink": null
+        "imageLink": "the_post.jpg"
     },
     {
-        "_id": "20",
-        "Movie": "A Beautiful Day in the Neighborhood",
+
+        "movieName": "A Beautiful Day in the Neighborhood",
         "yearReleased": 2019,
-        "imageLink": null
+        "imageLink": "a_beautiful_day_in_the_neighborhood.jpg"
     }
 ]

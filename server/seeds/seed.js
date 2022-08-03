@@ -1,14 +1,16 @@
 const db = require('../config/connection');
-const { Tech } = require('../models');
+const { Movie } = require('../models');
+// const { User } = require('../models');
 
 const hanksData = require('../seeds/hanksMovieData.json');
 const userData = require('../seeds/userData.json');
 
 db.once('open', async () => {
-  await Tech.deleteMany({});
+  await Movie.deleteMany({});
+ // await User.deleteMany({});
+  await Movie.insertMany(hanksData);
+  // await User.insertMany(userData);
 
-  const technologies = await Tech.insertMany(hanksData, userData);
-
-  console.log('Technologies seeded!');
+  console.log('Movies seeded!');
   process.exit(0);
 });
