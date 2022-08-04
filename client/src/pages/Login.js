@@ -5,6 +5,8 @@ import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
+
+
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -41,10 +43,15 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
+    
+
+
+
+     
+      <div className="col-lg-12 w-50 mx-auto flex-row justify-content-end" idName="background">
+          
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
+          <h4 className="justify-center card-header bg-dark text-light p-2">Login</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -54,27 +61,37 @@ const Login = (props) => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
-                  className="form-input"
+                  className="form-input justify-center "
                   placeholder="Your email"
                   name="email"
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
                 />
+                <br></br>
+                <br></br>
                 <input
-                  className="form-input"
+                  className="form-input justify-center"
                   placeholder="******"
                   name="password"
                   type="password"
                   value={formState.password}
                   onChange={handleChange}
-                />
+                /> 
                 <button
-                  className="btn btn-block btn-primary"
+                  className="btn btn-block btn-primary justify-center"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
                   Submit
+                </button>
+                <br></br>
+                <button
+                  className="btn btn-block btn-primary justify-center"
+                  style={{ cursor: 'pointer' }}
+                  type="submit"
+                >
+                  Sign Up
                 </button>
               </form>
             )}
@@ -87,7 +104,7 @@ const Login = (props) => {
           </div>
         </div>
       </div>
-    </main>
+    
   );
 };
 
