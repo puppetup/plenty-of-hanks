@@ -69,7 +69,6 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <br></br>
-                <br></br>
                 <input
                   className="form-input justify-center"
                   placeholder="******"
@@ -78,20 +77,26 @@ const Login = (props) => {
                   value={formState.password}
                   onChange={handleChange}
                 /> 
+                <br></br>
+                <br></br>
                 <button
-                  className="btn btn-block btn-primary justify-center"
+                  className="btn btn-group btn-warning justify-center"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
                   Submit
                 </button>
-                <br></br>
-                <button
-                  className="btn btn-block btn-primary justify-center"
+        
+                <button 
+                  className="btn btn-group btn-warning justify-center"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
-                  Sign Up
+                    <Link to="/signup">Sign Up</Link>
+                  <p>
+                {' '}
+                
+              </p>
                 </button>
               </form>
             )}
