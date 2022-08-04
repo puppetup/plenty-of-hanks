@@ -6,17 +6,17 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
-      if (context.user) {
-        const userData = await User.find({});
-        //const userData = await User.findOne({ _id: context.user._id }).select('-__v -password');
+      // if (context.user) {
+      console.log(args) 
+      //const userData = await User.find({});
+        const userData = await User.findOne({ _id: args.id }).populate("movies").select('-__v -password');
 
         return userData;
-      }
+      // }
 
-      throw new AuthenticationError('Not logged in');
+     // throw new AuthenticationError('Not logged in');
     },
-  },
-  Query: {
+    
     movies: async (parent, args) => {
      
         const movieData = await Movie.find({});
