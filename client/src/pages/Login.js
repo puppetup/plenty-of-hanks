@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import { LOGIN_USER } from "../utils/mutations";
 
-import Auth from '../utils/auth';
-
-
+import Auth from "../utils/auth";
 
 const Login = (props) => {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
@@ -37,79 +35,65 @@ const Login = (props) => {
 
     // clear form values
     setFormState({
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     });
   };
 
   return (
-    
-
-
-
-     
-      <div className="col-lg-12 w-50 mx-auto flex-row justify-content-end" idName="background">
-          
-        <div className="card">
-          <h4 className="justify-center card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
-            {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
+    <div
+      className="col-lg-12 w-50 mx-auto flex-row justify-content-end"
+      idName="background"
+    >
+      <div className="card">
+        <h4 className="justify-center text-center card-header bg-dark text-light p-6">
+          Login
+        </h4>
+        <div className="card-body">
+          {data ? (
+            <p>
+              Success! You may now head{" "}
+              <Link to="/">back to the homepage.</Link>
+            </p>
+          ) : (
+            <form>
+              <div className="form-group">
                 <input
-                  className="form-input justify-center "
-                  placeholder="Your email"
-                  name="email"
                   type="email"
-                  value={formState.email}
-                  onChange={handleChange}
+                  className="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
                 />
-                <br></br>
-                <input
-                  className="form-input justify-center"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                /> 
-                <br></br>
-                <br></br>
-                <button
-                  className="btn btn-group btn-warning justify-center"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                  Submit
-                </button>
-        
-                <button 
-                  className="btn btn-group btn-warning justify-center"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                    <Link to="/signup">Sign Up</Link>
-                  <p>
-                {' '}
-                
-              </p>
-                </button>
-              </form>
-            )}
-
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
+               
               </div>
-            )}
-          </div>
+              <div className="form-group">
+                <input
+                  type="password"
+                  className="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                />
+              </div>
+              <div className="form-check">
+               
+              </div>
+          
+             
+         
+              <button style ={{marginRight: 8}}type="submit" aria-pressed="true" className="btn btn-block btn-warning">
+                Login
+              </button> 
+              <br></br>
+              <Link to="/signup">
+              <button type="submit" aria-pressed="true" className="btn btn-block btn-warning">
+                Sign Up
+              </button></Link>
+            </form>
+          )}
         </div>
       </div>
-    
+    </div>
   );
 };
 
