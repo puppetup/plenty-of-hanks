@@ -14,7 +14,7 @@ import { removeBookId } from '../utils/localStorage';
 
 import Auth from '../utils/auth';
 
-const SavedBooks = () => {
+const SelectMovies = () => {
   const { loading, data } = useQuery(QUERY_ME);
   const [removeBook, { error }] = useMutation(REMOVE_BOOK);
 
@@ -91,4 +91,4 @@ const SavedBooks = () => {
   );
 };
 
-export default SavedBooks;
+export default SelectMovies;

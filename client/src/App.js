@@ -9,9 +9,11 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import SearchBooks from './pages/SearchBooks';
-import SavedBooks from './pages/SavedBooks';
+import SelectMovies from './pages/selectmovies';
+import TopFiveOrder from './pages/topfiveorder';
 import Navbar from './components/Navbar';
+import Match from './pages/match';
+import './utils/app.css'
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -36,22 +38,16 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-
+//updated route to login page 
 function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
         <>
+        <div className="flex-column justify-flex-start min-100-vh">
           <Navbar />
+          <div className = 'container'>
           <Routes>
-            <Route 
-              path="/Searchbook" 
-              element={<SearchBooks/>} 
-            />
-            <Route 
-              path="/saved" 
-              element={<SavedBooks/>} 
-            />
              <Route 
                 path= "/" 
                 element={<Login />}
@@ -60,13 +56,28 @@ function App() {
                 path="/signup" 
                 element={<Signup />}
               />
+              <Route 
+              path='/selectMovies' 
+              element={<SelectMovies />} 
+              />
+              <Route 
+              path='/topFive' 
+              element={<TopFiveOrder />} 
+              />
+              <Route 
+              path='/match'
+              element={<Match />}
+              />
             <Route 
               path='*' 
               element={<h1 className="display-2">Wrong page!</h1>}
             />
           </Routes>
+          </div>
+          </div>
         </>
       </Router>
+  
     </ApolloProvider>
   );
 }
