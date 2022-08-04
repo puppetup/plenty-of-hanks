@@ -1,77 +1,62 @@
 [
     {
-        "_id": 1,
-        "userName": "David",
-        "firstName": "David",
-        "lastName": "Rodriguez",
+        "username": "David",
         "email": "rodri237@gmail.com",
         "password": "password123",
         "movies": [
-            "Joe Vs The Volcano",
-            "Forrest Gump",
-            "Sleepless in Seattle",
-            "Big",
-            "That Thing You Do!"
+            "62eae0b61a844495dcc00e94",
+            "62eae0b61a844495dcc00e96",
+            "62eae0b61a844495dcc00e95",
+            "62eae0b61a844495dcc00e93",
+            "62eae0b61a844495dcc00e98"
         ]
     },
     {
-        "_id": 2,
-        "userName": "Marvin",
-        "firstName": "Marvin",
-        "lastName": "Santiago",
+        "username": "Marvin",
         "email": "marvinsntglpz@gmail.com",
         "password": "password123",
         "movies": [
-            "The Da Vinci Code (Series)",
-            "Forrest Gump",
-            "Toy Story (Series)",
-            "Captain Phillips",
-            "Apollo 13"
+            "62eae0b61a844495dcc00e9e",
+            "62eae0b61a844495dcc00e96",
+            "62eae0b61a844495dcc00e97",
+            "62eae0b61a844495dcc00ea0",
+            "62eae3b3a32b94ee69ee8771"
         ]
     },
     {
-        "_id": 3,
-        "userName": "Jordan",
-        "firstName": "Jordan",
-        "lastName": "Scheringer",
+        "username": "Jordan",
         "email": "schneringerj@gmail.com",
         "password": "password123",
         "movies": [
-            "The Green Mile",
-            "Big",
-            "Cast Away",
-            "Saving Private Ryan",
-            "Sleepless in Seattle"
+            "62eae3b3a32b94ee69ee8766",
+            "62eae0b61a844495dcc00e93",
+            "62eae3b3a32b94ee69ee8767",
+            "62eae3b3a32b94ee69ee8765",
+            "62eae0b61a844495dcc00e95"
         ]
     },
     {
-        "_id": 4,
-        "userName": "Jon",
-        "firstName": "ZhiChong",
-        "lastName": "Zheng",
+        "username": "Jon",
         "email": "jonheng@gmail.com",
         "password": "password123",
         "movies": [
-            "Forrest Gump",
-            "Apollo 13",
-            "Captain Phillips",
-            "Catch Me if You Can",
-            "Sully"
+            "62eae0b61a844495dcc00e96",
+            "62eae3b3a32b94ee69ee8771",
+            "62eae0b61a844495dcc00ea0",
+            "62eae3b3a32b94ee69ee8768",
+            "62eae3b3a32b94ee69ee876e"
         ]
     },
     {
-        "_id": 5,
-        "userName": "Savino",
-        "firstName": "Savino",
-        "lastName": "Hoshizaki",
+        "username": "Savino",
         "email": "savinohoshizaki@gmail.com",
         "password": "password123",
         "movies": [
-            "Joe Vs The Volcano",
-            "Forrest Gump",
-            "Sleepless in Seattle",
-            "Big",
-            "That Thing You Do!"
+            "62eae0b61a844495dcc00e94",
+            "62eae0b61a844495dcc00e96",
+            "62eae0b61a844495dcc00e95",
+            "62eae0b61a844495dcc00e93",
+            "62eae0b61a844495dcc00e98"
         ]
     }
 ]

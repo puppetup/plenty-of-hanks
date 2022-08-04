@@ -10,7 +10,7 @@
         "imageLink": "Big.jpg"
     },
     {
-        "movieName": "Joe Vs The Volcano",
+        "movieName": "Joe Vs. The Volcano",
         "yearReleased": 1990,
         "imageLink": "joevsthevolcano.jpg"
     },
@@ -104,5 +104,10 @@
         "movieName": "A Beautiful Day in the Neighborhood",
         "yearReleased": 2019,
         "imageLink": "a_beautiful_day_in_the_neighborhood.jpg"
+    },
+    {
+        "movieName": "Apollo 13",
+        "yearReleased": 1995,
+        "imageLink": "apollo13.jpg"
     }
 ]
