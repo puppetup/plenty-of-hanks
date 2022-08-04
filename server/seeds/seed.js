@@ -6,13 +6,13 @@ const hanksData = require('../seeds/hanksMovieData.json');
 const userData = require('../seeds/userData.json');
 
 db.once('open', async () => {
-  await Movie.deleteMany({});
-  await User.deleteMany({});
-  await Movie.insertMany(hanksData);
-  await User.insertMany(userData);
+  // await Movie.deleteMany({});
+  // await User.deleteMany({});
+  // await Movie.insertMany(hanksData);
+  // await User.insertMany(userData);
   
-  await Movie.deleteMany({});
-      await User.deleteMany({});
+await Movie.deleteMany({});
+await User.deleteMany({});
       const movieIdArr = []
       const users = await User.create(userSeeds);
 
@@ -33,9 +33,7 @@ db.once('open', async () => {
           
           );
         }
-
-
-
+      }
+});
   console.log('Movies seeded!');
   process.exit(0);
-});
