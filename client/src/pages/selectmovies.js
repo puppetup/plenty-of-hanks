@@ -47,18 +47,18 @@ const SelectMovies = () => {
 
   return (
     <>
-      <Jumbotron fluid className="text-light bg-dark">
+      <Jumbotron fluid className=" ">
         <Container>
           <h1>Viewing {userData.username}'s books!</h1>
         </Container>
       </Jumbotron>
-      <Container>
+      <Container className="" >
         <h2>
           {userData.savedBooks?.length
             ? `Viewing ${userData.savedBooks.length} saved ${
                 userData.savedBooks.length === 1 ? 'book' : 'books'
               }:`
-            : 'You have no saved books!'}
+            : 'Select five Tom Hanks Movies!'}
         </h2>
         <CardColumns>
           {userData.savedBooks?.map((book) => {
