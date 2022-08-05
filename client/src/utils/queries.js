@@ -17,3 +17,13 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const getMovies = gql`
+  {
+  movies {
+      movieName
+      yearReleased
+      imageLink
+    }
+  }
+`;
