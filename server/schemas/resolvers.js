@@ -9,8 +9,8 @@ const resolvers = {
       // if (context.user) {
       console.log(args) 
       //const userData = await User.find({});
-        const userData = await User.findOne({ _id: args.id }).populate("movies").select('-__v -password');
-
+        const userData = await User.findOne({ _id: args.id }).populate('movies');
+      console.log(userData);
         return userData;
       // }
 
