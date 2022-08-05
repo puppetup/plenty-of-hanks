@@ -84,9 +84,10 @@ const Login = (props) => {
           
              
          
+              <Link to="/selectmovies">
               <button style ={{marginRight: 8}}type="submit" aria-pressed="true" className="btn btn-block btn-warning">
                 Login
-              </button> 
+              </button> </Link>
               <br></br>
               <Link to="/signup">
               <button type="submit" aria-pressed="true" className="btn btn-block btn-warning">

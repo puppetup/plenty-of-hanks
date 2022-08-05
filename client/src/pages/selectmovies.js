@@ -8,20 +8,22 @@ import {
 } from 'react-bootstrap';
 
 import { useQuery, useMutation } from '@apollo/client';
-import { QUERY_ME } from '../utils/queries';
+import { getMovies } from '../utils/queries';
 import { REMOVE_BOOK } from '../utils/mutations';
 import { removeBookId } from '../utils/localStorage';
 
 import Auth from '../utils/auth';
 
 const SelectMovies = () => {
-  const { loading, data } = useQuery(QUERY_ME);
+  const { loading, data } = useQuery(getMovies);
   const [removeBook, { error }] = useMutation(REMOVE_BOOK);
 
   const userData = data?.me || {};
+  const movieData = data?.movies || {};
+  console.log('Hello', data, movieData)
 
   // create function that accepts the book's mongo _id value as param and deletes the book from the database
-  const handleDeleteBook = async (bookId) => {
+  const handleDeleteMovie = async (bookId) => {
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -47,18 +49,18 @@ const SelectMovies = () => {
 
   return (
     <>
-      <Jumbotron fluid className="text-light bg-dark">
+      <Jumbotron fluid className=" ">
         <Container>
           <h1>Viewing {userData.username}'s books!</h1>
         </Container>
       </Jumbotron>
-      <Container>
+      <Container className="" >
         <h2>
           {userData.savedBooks?.length
             ? `Viewing ${userData.savedBooks.length} saved ${
                 userData.savedBooks.length === 1 ? 'book' : 'books'
               }:`
-            : 'You have no saved books!'}
+            : 'Select five Tom Hanks Movies!'}
         </h2>
         <CardColumns>
           {userData.savedBooks?.map((book) => {
@@ -77,9 +79,38 @@ const SelectMovies = () => {
                   <Card.Text>{book.description}</Card.Text>
                   <Button
                     className="btn-block btn-danger"
-                    onClick={() => handleDeleteBook(book.bookId)}
+                    onClick={() => handleDeleteMovie(book.bookId)}
                   >
                     Delete this Book!
+                  </Button>
+                </Card.Body>
+              </Card>
+            );
+          })}
+        </CardColumns>
+        {/* ALL TOM HANKS MOVIES */}
+        <CardColumns>
+          {console.log('hi2', movieData)}
+          {movieData?.map((movie) => {
+            return (
+              <Card key={movie.movieName} border="dark">
+                {movie.imageLink ? (
+                  <Card.Img
+                    src={`../../server/images/${movie.imageLink}`}
+                  
+                    alt={`The cover for ${movie.movieName}`}
+                    variant="top"
+                  />
+                ) : null}
+                <Card.Body>
+                  <Card.Title>{movie.movieName}</Card.Title>
+                  <p className="small">Authors: {movie.authors}</p>
+                  <Card.Text>{movie.description}</Card.Text>
+                  <Button
+                    className="btn-block btn-danger"
+                    onClick={() => handleDeleteMovie(movie.movieId)}
+                  >
+                    Delete this movie!
                   </Button>
                 </Card.Body>
               </Card>
