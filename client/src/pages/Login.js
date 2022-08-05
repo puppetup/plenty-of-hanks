@@ -45,7 +45,7 @@ const Login = (props) => {
   return (
     <div
       className="col-lg-12 w-50 mx-auto flex-row justify-content-end"
-      idName="background"
+      id="background"
     >
      <AppNavbar></AppNavbar>
       <div className="card">
