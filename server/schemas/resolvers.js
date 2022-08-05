@@ -51,7 +51,21 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    saveMovie: async (parent, { movie_id }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $push: { movies: movie_id } },
+          { new: true }
+        );
+
+        return updatedUser;
+      }
+
+      throw new AuthenticationError('You need to be logged in!');
+    },
   },
 };
+  
 
 module.exports = resolvers;
