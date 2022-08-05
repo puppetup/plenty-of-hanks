@@ -9,8 +9,8 @@ import {
 
 import { useQuery, useMutation } from '@apollo/client';
 import { getMovies } from '../utils/queries';
-import { REMOVE_BOOK } from '../utils/mutations';
-import { removeBookId } from '../utils/localStorage';
+// import { REMOVE_BOOK } from '../utils/mutations';
+// import { removeBookId } from '../utils/localStorage';
 
 import Auth from '../utils/auth';
 
