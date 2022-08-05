@@ -10,12 +10,13 @@ db.once('open', async () => {
   // await User.deleteMany({});
   // await Movie.insertMany(hanksData);
   // await User.insertMany(userData);
-  
+  try {
+  console.log("hello")
 await Movie.deleteMany({});
 await User.deleteMany({});
       const movieIdArr = []
       const users = await User.create(userSeeds);
-
+console.log(users)
       for (let i = 0; i < movieSeeds.length; i++) {
         const { _id } = await Movie.create(movieSeeds[i]);
         movieIdArr.push(_id)
@@ -34,7 +35,10 @@ await User.deleteMany({});
           );
         }
       }
-
+    } catch(err) {
+      console.error(err)
+    }
   console.log('Movies seeded!');
   process.exit(0);
+
 });
