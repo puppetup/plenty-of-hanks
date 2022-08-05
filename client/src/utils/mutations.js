@@ -24,6 +24,20 @@ export const ADD_USER = gql`
   }
 `;
 
+export const SAVE_MOVIE = gql`
+mutation Mutation($movieId: ID!) {
+  saveMovie(movie_id: $movieId) {
+    _id
+    username
+    email
+    movies {
+      _id
+    }
+  }
+}
+`
+
+
 // export const SAVE_BOOK = gql`
 //   mutation saveBook($bookData: BookInput!) {
 //     saveBook(bookData: $bookData) {
