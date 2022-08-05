@@ -6,13 +6,13 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
-      // if (context.user) {
+      if (context.user) {
       console.log(args) 
       //const userData = await User.find({});
-        const userData = await User.findOne({ _id: args.id }).populate('movies');
+        const userData = await User.findOne({ _id: context.user._id }).populate('movies');
       console.log(userData);
         return userData;
-      // }
+      }
 
      // throw new AuthenticationError('Not logged in');
     },

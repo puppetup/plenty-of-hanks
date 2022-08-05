@@ -9,21 +9,29 @@ import {
 
 import { useQuery, useMutation } from '@apollo/client';
 import { getMovies } from '../utils/queries';
+<<<<<<< HEAD
 // import { REMOVE_BOOK } from '../utils/mutations';
 // import { removeBookId } from '../utils/localStorage';
+=======
+import { SAVE_MOVIE } from '../utils/mutations';
+import { removeBookId } from '../utils/localStorage';
+>>>>>>> main
 
 import Auth from '../utils/auth';
 
 const SelectMovies = () => {
   const { loading, data } = useQuery(getMovies);
-  const [removeBook, { error }] = useMutation(REMOVE_BOOK);
+  const [saveMovie, { error }] = useMutation(SAVE_MOVIE);
 
-  const userData = data?.me || {};
-  const movieData = data?.movies || {};
+  
+  const movieData = data?.movies || [];
   console.log('Hello', data, movieData)
 
   // create function that accepts the book's mongo _id value as param and deletes the book from the database
-  const handleDeleteMovie = async (bookId) => {
+  const handleSelectMovie = async (movieId) => {
+    const userSelections = [];
+    userSelections.push(movieId)
+    
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -32,12 +40,12 @@ const SelectMovies = () => {
     }
 
     try {
-      const { data } = await removeBook({
-        variables: { bookId },
+      const { data } = await saveMovie({
+        variables: { movieId },
       });
 
       // upon success, remove book's id from localStorage
-      removeBookId(bookId);
+      // removeBookId(movieId);
     } catch (err) {
       console.error(err);
     }
@@ -49,45 +57,7 @@ const SelectMovies = () => {
 
   return (
     <>
-      <Jumbotron fluid className=" ">
-        <Container>
-          <h1>Viewing {userData.username}'s books!</h1>
-        </Container>
-      </Jumbotron>
-      <Container className="" >
-        <h2>
-          {userData.savedBooks?.length
-            ? `Viewing ${userData.savedBooks.length} saved ${
-                userData.savedBooks.length === 1 ? 'book' : 'books'
-              }:`
-            : 'Select five Tom Hanks Movies!'}
-        </h2>
-        <CardColumns>
-          {userData.savedBooks?.map((book) => {
-            return (
-              <Card key={book.bookId} border="dark">
-                {book.image ? (
-                  <Card.Img
-                    src={book.image}
-                    alt={`The cover for ${book.title}`}
-                    variant="top"
-                  />
-                ) : null}
-                <Card.Body>
-                  <Card.Title>{book.title}</Card.Title>
-                  <p className="small">Authors: {book.authors}</p>
-                  <Card.Text>{book.description}</Card.Text>
-                  <Button
-                    className="btn-block btn-danger"
-                    onClick={() => handleDeleteMovie(book.bookId)}
-                  >
-                    Delete this Book!
-                  </Button>
-                </Card.Body>
-              </Card>
-            );
-          })}
-        </CardColumns>
+    <Container>
         {/* ALL TOM HANKS MOVIES */}
         <CardColumns>
           {console.log('hi2', movieData)}
@@ -108,7 +78,7 @@ const SelectMovies = () => {
                   <Card.Text>{movie.description}</Card.Text>
                   <Button
                     className="btn-block btn-danger"
-                    onClick={() => handleDeleteMovie(movie.movieId)}
+                    onClick={() => handleSelectMovie(movie.movieId)}
                   >
                     Delete this movie!
                   </Button>

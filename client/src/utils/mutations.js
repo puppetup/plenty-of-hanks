@@ -25,7 +25,7 @@ export const ADD_USER = gql`
 `;
 
 export const SAVE_MOVIE = gql`
-mutation Mutation($movieId: ID!) {
+mutation saveMovie($movieId: ID!) {
   saveMovie(movie_id: $movieId) {
     _id
     username
@@ -35,41 +35,4 @@ mutation Mutation($movieId: ID!) {
     }
   }
 }
-`
-
-
-// export const SAVE_BOOK = gql`
-//   mutation saveBook($bookData: BookInput!) {
-//     saveBook(bookData: $bookData) {
-//       _id
-//       username
-//       email
-//       savedBooks {
-//         bookId
-//         authors
-//         image
-//         description
-//         title
-//         link
-//       }
-//     }
-//   }
-// `;
-
-// export const REMOVE_BOOK = gql`
-//   mutation removeBook($bookId: ID!) {
-//     removeBook(bookId: $bookId) {
-//       _id
-//       username
-//       email
-//       savedBooks {
-//         bookId
-//         authors
-//         image
-//         description
-//         title
-//         link
-//       }
-//     }
-//   }
-// `;
+`;
