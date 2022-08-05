@@ -43,7 +43,7 @@ const Login = (props) => {
   return (
     <div
       className="col-lg-12 w-50 mx-auto flex-row justify-content-end"
-      idName="background"
+      id="background"
     >
       <div className="card">
         <h4 className="justify-center text-center card-header bg-dark text-light p-6">
