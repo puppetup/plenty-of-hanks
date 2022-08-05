@@ -3,7 +3,6 @@ import {
     Container
 } from 'react-bootstrap';
 
-
 const Match = () => {
 
     return (
