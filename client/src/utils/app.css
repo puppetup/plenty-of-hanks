@@ -1,17 +1,78 @@
 :root {
     --bluish: #59bfff;
 
-    
+    /* That Thing You Do! */
+    --thatorange: #d63f06;
+    --thatgreen: #67a019;
+    --thatpurple: #7712a5;
+    --thatfuscia: #cc0069;
+
+    /* background Hanks Color pallette */
+    --hanksgray: #36332b;
+    --hanksbrown: #856351;
+    --hankslightbrown: #b67c5b;
+    --hankscream: #f3d5b6;
+
+    --bgdark: #343a40;
+
+}
+
+* {
+
+    font-family: 'Patua One', cursive;
+    color: var(--bluish);
+}
+
+#root {
+
+    color: var(--thatorange);
+
 }
 
 
-  .card {
-      display: flex;
-      
-      margin-top: 250px;
-     align-content: center;
-  }
+#loginbackground {
+    background-color: #343a40;
+    color: var(--thatfuscia);
+}
 
-  body {
-      background-image: url("../img/tom_hanks.jpeg");
-  }
+.card {
+    display: flex;
+    font-family: 'Patua One', cursive;
+    margin-top: 250px;
+    align-content: center;
+}
+
+#button {
+    background-color: var(--thatorange);
+
+}
+
+#card {
+    background-color: var(--thatorange);
+    }
+
+.navbar-brand {
+    /* background-color: var(--thatorange); */
+}
+
+.navbar {
+    background-color: var(--thatorange);
+}
+
+nav {
+    background-color: var(--thatorange);
+}
+
+head {
+    background-color: var(--thatorange);
+}
+
+body {
+    font-family: 'Patua One', cursive;
+    background-image: url("../img/tom_hanks.jpeg");
+}
+
+h4 {
+    color: var(--thatgreen);
+    font-family: 'Patua One', cursive;
+}
