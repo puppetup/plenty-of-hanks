@@ -1,5 +1,8 @@
 //import React, { useState, useEffect } from 'react';
 
+//get use query
+
+
 //temporary variables, to be replaced with array from topfive page
 //TODO: replace with previous page data from selection page
 const userTopFive_1 = [0, 1, 2, 3, 4, 9];
@@ -30,10 +33,10 @@ const databaseLoggedindatabase = [
 //Const allUser = { movies: []}
 console.log("hello");
 
-const userTopFiveCompare = function () {
+const userTopFiveCompare = () => {
   console.log(CurrentLoggedinUser);
   console.log(databaseLoggedindatabase);
-
+  
   //   if (CurrentLoggedinUser.length !== databaseLoggedindatabase.length) {
   //     console.log("checked length");
   //     return false;

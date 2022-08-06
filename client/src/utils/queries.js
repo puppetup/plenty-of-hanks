@@ -13,6 +13,22 @@ export const QUERY_ME = gql`
   
 `;
 
+// export const getMatches = gql`
+  
+//     query me {
+//   me {
+//     username
+//     movies {
+//       movieName
+//     }
+//   }
+// }
+  
+// `;
+
+
+
+
 export const getMovies = gql`
   
   query movies {
