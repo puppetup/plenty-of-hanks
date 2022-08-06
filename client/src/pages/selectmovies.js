@@ -73,7 +73,7 @@ const SelectMovies = () => {
                   <Card.Title>{movie.movieName}</Card.Title>
                   <p className="small">Released: {movie.yearReleased}</p>
                   <Button
-                    className="btn-block btn-success"
+                    className="btn-block btn-dark"
                     id={`${movie.movieName}`}
                     onClick={(e) => handleSelectMovie(e)}
                   >
