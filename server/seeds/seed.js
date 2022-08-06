@@ -11,12 +11,11 @@ db.once('open', async () => {
   // await Movie.insertMany(hanksData);
   // await User.insertMany(userData);
   try {
-  console.log("hello")
 await Movie.deleteMany({});
 await User.deleteMany({});
       const movieIdArr = []
       const users = await User.create(userSeeds);
-console.log(users)
+// console.log(users)
       for (let i = 0; i < movieSeeds.length; i++) {
         const { _id } = await Movie.create(movieSeeds[i]);
         movieIdArr.push(_id)
