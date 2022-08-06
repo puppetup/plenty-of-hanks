@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import {
   Jumbotron,
   Container,
@@ -7,59 +7,59 @@ import {
   Button,
   Card,
   CardColumns,
-} from 'react-bootstrap';
+} from "react-bootstrap";
 
 import { useMutation } from '@apollo/client';
-import { SAVE_BOOK } from '../utils/mutations';
-import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
+// import { SAVE_BOOK } from '../utils/mutations';
+// import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
 
-import Auth from '../utils/auth';
+import Auth from "../utils/auth";
 
 const TopFiveOrder = () => {
   // create state for holding returned google api data
   const [searchedBooks, setSearchedBooks] = useState([]);
   // create state for holding our search field data
-  const [searchInput, setSearchInput] = useState('');
+  const [searchInput, setSearchInput] = useState("");
 
   // create state to hold saved bookId values
-  const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
+  // const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
 
-  const [saveBook, { error }] = useMutation(SAVE_BOOK);
+  // const [saveBook, { error }] = useMutation(SAVE_BOOK);
 
   // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
   // learn more here: https://reactjs.org/docs/hooks-effect.html#effects-with-cleanup
   useEffect(() => {
-    return () => saveBookIds(savedBookIds);
+    // return () => saveBookIds(savedBookIds);
   });
 
   // create method to search for books and set state on form submit
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    if (!searchInput) {
-      return false;
-    }
+    // if (!searchInput) {
+    //   return false;
+    // }
 
     try {
-      const response = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${searchInput}`
-      );
+    //   const response = await fetch(
+    //     `https://www.googleapis.com/books/v1/volumes?q=${searchInput}`
+    //   );
 
-      if (!response.ok) {
-        throw new Error('something went wrong!');
-      }
+    //   if (!response.ok) {
+    //     throw new Error('something went wrong!');
+    //   }
 
-      const { items } = await response.json();
+    //   const { items } = await response.json();
 
-      const bookData = items.map((book) => ({
-        bookId: book.id,
-        authors: book.volumeInfo.authors || ['No author to display'],
-        title: book.volumeInfo.title,
-        description: book.volumeInfo.description,
-        image: book.volumeInfo.imageLinks?.thumbnail || '',
-      }));
+    //   const bookData = items.map((book) => ({
+    //     bookId: book.id,
+    //     authors: book.volumeInfo.authors || ['No author to display'],
+    //     title: book.volumeInfo.title,
+    //     description: book.volumeInfo.description,
+    //     image: book.volumeInfo.imageLinks?.thumbnail || '',
+    //   }));
 
-      setSearchedBooks(bookData);
+      // setSearchedBooks(bookData);
       setSearchInput('');
     } catch (err) {
       console.error(err);
@@ -67,51 +67,38 @@ const TopFiveOrder = () => {
   };
 
   // create function to handle saving a book to our database
-  const handleSaveBook = async (bookId) => {
-    // find the book in `searchedBooks` state by the matching id
-    const bookToSave = searchedBooks.find((book) => book.bookId === bookId);
+  // const handleSaveBook = async (bookId) => {
+  //   // find the book in `searchedBooks` state by the matching id
+  //   const bookToSave = searchedBooks.find((book) => book.bookId === bookId);
 
-    // get token
-    const token = Auth.loggedIn() ? Auth.getToken() : null;
+  //   // get token
+  //   const token = Auth.loggedIn() ? Auth.getToken() : null;
 
-    if (!token) {
-      return false;
-    }
+  //   if (!token) {
+  //     return false;
+  //   }
 
-    try {
-      const { data } = await saveBook({
-        variables: { bookData: { ...bookToSave } },
-      });
-      console.log(savedBookIds);
-      setSavedBookIds([...savedBookIds, bookToSave.bookId]);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  //   try {
+  //     const { data } = await saveBook({
+  //       variables: { bookData: { ...bookToSave } },
+  //     });
+  //     console.log(savedBookIds);
+  //     setSavedBookIds([...savedBookIds, bookToSave.bookId]);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
   return (
     <>
       <Jumbotron fluid className="text-light bg-dark">
         <Container>
-          <h1>Search for Books!</h1>
-          <Form onSubmit={handleFormSubmit}>
-            <Form.Row>
-              <Col xs={12} md={8}>
-                <Form.Control
-                  name="searchInput"
-                  value={searchInput}
-                  onChange={(e) => setSearchInput(e.target.value)}
-                  type="text"
-                  size="lg"
-                  placeholder="Search for a book"
-                />
-              </Col>
-              <Col xs={12} md={4}>
-                <Button type="submit" variant="success" size="lg">
-                  Submit Search
-                </Button>
-              </Col>
-            </Form.Row>
-          </Form>
+          <div data-mdb-sortable="sortable" class="sortable-list">
+            <div class="sortable-item">Item 1</div>
+            <div class="sortable-item">Item 2</div>
+            <div class="sortable-item">Item 3</div>
+            <div class="sortable-item">Item 4</div>
+            <div class="sortable-item">Item 5</div>
+          </div>
         </Container>
       </Jumbotron>
 
@@ -138,15 +125,15 @@ const TopFiveOrder = () => {
                   <Card.Text>{book.description}</Card.Text>
                   {Auth.loggedIn() && (
                     <Button
-                      disabled={savedBookIds?.some(
-                        (savedId) => savedId === book.bookId
-                      )}
+                      // disabled={savedBookIds?.some(
+                      //   (savedId) => savedId === book.bookId
+                      // )}
                       className="btn-block btn-info"
-                      onClick={() => handleSaveBook(book.bookId)}
+                      // onClick={() => handleSaveBook(book.bookId)}
                     >
-                      {savedBookIds?.some((savedId) => savedId === book.bookId)
+                      {/* {savedBookIds?.some((savedId) => savedId === book.bookId)
                         ? 'Book Already Saved!'
-                        : 'Save This Book!'}
+                        : 'Save This Book!'} */}
                     </Button>
                   )}
                 </Card.Body>

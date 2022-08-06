@@ -6,13 +6,13 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
-      // if (context.user) {
+      if (context.user) {
       console.log(args) 
       //const userData = await User.find({});
-        const userData = await User.findOne({ _id: args.id }).populate('movies');
+        const userData = await User.findOne({ _id: context.user._id }).populate('movies');
       console.log(userData);
         return userData;
-      // }
+      }
 
      // throw new AuthenticationError('Not logged in');
     },
@@ -51,7 +51,21 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    saveMovie: async (parent, { movie_id }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $push: { movies: movie_id } },
+          { new: true }
+        );
+
+        return updatedUser;
+      }
+
+      throw new AuthenticationError('You need to be logged in!');
+    },
   },
 };
+  
 
 module.exports = resolvers;

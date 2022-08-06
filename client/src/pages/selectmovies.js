@@ -9,21 +9,26 @@ import {
 
 import { useQuery, useMutation } from '@apollo/client';
 import { getMovies } from '../utils/queries';
-import { REMOVE_BOOK } from '../utils/mutations';
-import { removeBookId } from '../utils/localStorage';
+import { SAVE_MOVIE } from '../utils/mutations';
+
+
 
 import Auth from '../utils/auth';
 
+const userSelections = [];
+
 const SelectMovies = () => {
   const { loading, data } = useQuery(getMovies);
-  const [removeBook, { error }] = useMutation(REMOVE_BOOK);
+  const [saveMovie, { error }] = useMutation(SAVE_MOVIE);
 
-  const userData = data?.me || {};
-  const movieData = data?.movies || {};
-  console.log('Hello', data, movieData)
+  
+  const movieData = data?.movies || [];
 
-  // create function that accepts the book's mongo _id value as param and deletes the book from the database
-  const handleDeleteMovie = async (bookId) => {
+  // event handling function that accepts the movie's mongo _id value as param and adds to user selection array
+  const handleSelectMovie = async (e) => {
+    const movieId = e.target?.id
+    userSelections.push(movieId)
+    console.log(userSelections, e,movieId)
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -32,12 +37,12 @@ const SelectMovies = () => {
     }
 
     try {
-      const { data } = await removeBook({
-        variables: { bookId },
+      const { data } = await saveMovie({
+        variables: { movieId },
       });
 
       // upon success, remove book's id from localStorage
-      removeBookId(bookId);
+      // removeBookId(movieId);
     } catch (err) {
       console.error(err);
     }
@@ -49,54 +54,16 @@ const SelectMovies = () => {
 
   return (
     <>
-      <Jumbotron fluid className=" ">
-        <Container>
-          <h1>Viewing {userData.username}'s books!</h1>
-        </Container>
-      </Jumbotron>
-      <Container className="" >
-        <h2>
-          {userData.savedBooks?.length
-            ? `Viewing ${userData.savedBooks.length} saved ${
-                userData.savedBooks.length === 1 ? 'book' : 'books'
-              }:`
-            : 'Select five Tom Hanks Movies!'}
-        </h2>
-        <CardColumns>
-          {userData.savedBooks?.map((book) => {
-            return (
-              <Card key={book.bookId} border="dark">
-                {book.image ? (
-                  <Card.Img
-                    src={book.image}
-                    alt={`The cover for ${book.title}`}
-                    variant="top"
-                  />
-                ) : null}
-                <Card.Body>
-                  <Card.Title>{book.title}</Card.Title>
-                  <p className="small">Authors: {book.authors}</p>
-                  <Card.Text>{book.description}</Card.Text>
-                  <Button
-                    className="btn-block btn-danger"
-                    onClick={() => handleDeleteMovie(book.bookId)}
-                  >
-                    Delete this Book!
-                  </Button>
-                </Card.Body>
-              </Card>
-            );
-          })}
-        </CardColumns>
+    <Container>
         {/* ALL TOM HANKS MOVIES */}
         <CardColumns>
           {console.log('hi2', movieData)}
-          {movieData?.map((movie) => {
+          {movieData?.map((movie) => { 
             return (
               <Card key={movie.movieName} border="dark">
                 {movie.imageLink ? (
                   <Card.Img
-                    src={`../../server/images/${movie.imageLink}`}
+                    src={`${movie.imageLink}`}
                   
                     alt={`The cover for ${movie.movieName}`}
                     variant="top"
@@ -104,13 +71,13 @@ const SelectMovies = () => {
                 ) : null}
                 <Card.Body>
                   <Card.Title>{movie.movieName}</Card.Title>
-                  <p className="small">Authors: {movie.authors}</p>
-                  <Card.Text>{movie.description}</Card.Text>
+                  <p className="small">Released: {movie.yearReleased}</p>
                   <Button
-                    className="btn-block btn-danger"
-                    onClick={() => handleDeleteMovie(movie.movieId)}
+                    className="btn-block btn-success"
+                    id={`${movie.movieName}`}
+                    onClick={(e) => handleSelectMovie(e)}
                   >
-                    Delete this movie!
+                    Select this movie!
                   </Button>
                 </Card.Body>
               </Card>

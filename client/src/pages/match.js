@@ -1,7 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
 import {
     Container
 } from 'react-bootstrap';
+=======
+import {Container} from 'react-bootstrap';
+import { getMovies } from "../utils/mutations";
+>>>>>>> ea69054103fb8492bb8459bfbc2ce9c0f9fdb62e
 
 const Match = () => {
 
