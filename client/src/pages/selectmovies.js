@@ -10,9 +10,12 @@ import {
 import { useQuery, useMutation } from '@apollo/client';
 import { getMovies } from '../utils/queries';
 import { SAVE_MOVIE } from '../utils/mutations';
-import { removeBookId } from '../utils/localStorage';
+
+
 
 import Auth from '../utils/auth';
+
+const userSelections = [];
 
 const SelectMovies = () => {
   const { loading, data } = useQuery(getMovies);
@@ -20,13 +23,12 @@ const SelectMovies = () => {
 
   
   const movieData = data?.movies || [];
-  console.log('Hello', data, movieData)
 
-  // create function that accepts the book's mongo _id value as param and deletes the book from the database
-  const handleSelectMovie = async (movieId) => {
-    const userSelections = [];
+  // event handling function that accepts the movie's mongo _id value as param and adds to user selection array
+  const handleSelectMovie = async (e) => {
+    const movieId = e.target?.id
     userSelections.push(movieId)
-    
+    console.log(userSelections, e,movieId)
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -56,12 +58,12 @@ const SelectMovies = () => {
         {/* ALL TOM HANKS MOVIES */}
         <CardColumns>
           {console.log('hi2', movieData)}
-          {movieData?.map((movie) => {
+          {movieData?.map((movie) => { 
             return (
               <Card key={movie.movieName} border="dark">
                 {movie.imageLink ? (
                   <Card.Img
-                    src={`../../server/images/${movie.imageLink}`}
+                    src={`${movie.imageLink}`}
                   
                     alt={`The cover for ${movie.movieName}`}
                     variant="top"
@@ -69,13 +71,13 @@ const SelectMovies = () => {
                 ) : null}
                 <Card.Body>
                   <Card.Title>{movie.movieName}</Card.Title>
-                  <p className="small">Authors: {movie.authors}</p>
-                  <Card.Text>{movie.description}</Card.Text>
+                  <p className="small">Released: {movie.yearReleased}</p>
                   <Button
-                    className="btn-block btn-danger"
-                    onClick={() => handleSelectMovie(movie.movieId)}
+                    className="btn-block btn-success"
+                    id={`${movie.movieName}`}
+                    onClick={(e) => handleSelectMovie(e)}
                   >
-                    Delete this movie!
+                    Select this movie!
                   </Button>
                 </Card.Body>
               </Card>
