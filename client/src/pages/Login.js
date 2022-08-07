@@ -49,7 +49,7 @@ const Login = (props) => {
     >
      <AppNavbar></AppNavbar>
       <div className="card">
-        <h4 className="justify-center text-center card-header bg-dark text-light p-6">
+        <h4 className="justify-center text-center card-header text-light p-6" id="loginbackground">
           Login
         </h4>
         <div className="card-body">
@@ -60,7 +60,7 @@ const Login = (props) => {
             </p>
           ) : (
             <form>
-              <div className="form-group">
+              <div className="form-group bg-dark">
                 <input
                   type="email"
                   className="form-control"
@@ -70,7 +70,7 @@ const Login = (props) => {
                 />
                
               </div>
-              <div className="form-group">
+              <div className="form-group bg-dark">
                 <input
                   type="password"
                   className="form-control"
@@ -85,12 +85,12 @@ const Login = (props) => {
              
          
               <Link to="/selectmovies">
-              <button style ={{marginRight: 8}}type="submit" aria-pressed="true" className="btn btn-block btn-warning">
+              <button style ={{marginRight: 8}}type="submit" aria-pressed="true" className="btn btn-block btn-dark">
                 Login
               </button> </Link>
               <br></br>
               <Link to="/signup">
-              <button type="submit" aria-pressed="true" className="btn btn-block btn-warning">
+              <button type="submit" aria-pressed="true" className="btn btn-block btn-dark">
                 Sign Up
               </button></Link>
             </form>
