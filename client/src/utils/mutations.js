@@ -25,12 +25,10 @@ export const ADD_USER = gql`
 `;
 
 export const SAVE_MOVIE = gql`
-mutation saveMovie($movieId: ID!) {
+mutation SaveMovie($movieId: ID!) {
   saveMovie(movie_id: $movieId) {
-    _id
-    username
-    email
     movies {
+      movieName
       _id
     }
   }
