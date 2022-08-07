@@ -5,22 +5,18 @@ export const QUERY_ME = gql`
     query me {
   me {
     username
-    movies {
-      movieName
-    }
+    movies
   }
 }
   
 `;
 
-// export const getMatches = gql`
+// export const GET_MATCHES = gql`
   
 //     query me {
 //   me {
 //     username
-//     movies {
-//       movieName
-//     }
+//     movies 
 //   }
 // }
   
