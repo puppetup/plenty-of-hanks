@@ -1,8 +1,9 @@
 //import React, { useState, useEffect } from 'react';
-
+//import { QUERY_ME } from "../../utils/queries";
 //get use query
-
-
+// const localStorageArr = window.localStorage.getItem('hi2');
+// console.log(localStorageArr);
+//console.log(`Hi ${localStorageArr} is in localStorage.`);
 //temporary variables, to be replaced with array from topfive page
 //TODO: replace with previous page data from selection page
 const userTopFive_1 = [0, 1, 2, 3, 4, 9];

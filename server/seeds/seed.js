@@ -38,6 +38,7 @@ await User.deleteMany({});
       console.error(err)
     }
   console.log('Movies seeded!');
+  console.log('Users seeded!');
   process.exit(0);
 
 });
