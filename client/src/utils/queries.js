@@ -40,3 +40,15 @@ export const getMovies = gql`
     }
   
 `;
+
+export const getUsers = gql`
+  
+  query users {
+    users {
+    username
+    movies {
+      movieName
+    }
+  }
+  }
+`;

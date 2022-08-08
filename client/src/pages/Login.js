@@ -59,7 +59,10 @@ const Login = (props) => {
             <form>
               <div className="form-group bg-dark">
                 <input
+                  onChange={handleChange}
                   type="email"
+                  name="email"
+                  value={formState.email}
                   className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
@@ -69,6 +72,9 @@ const Login = (props) => {
               </div>
               <div className="form-group bg-dark">
                 <input
+                  onChange={handleChange}
+                  name="password"
+                  value={formState.password}
                   type="password"
                   className="form-control"
                   id="exampleInputPassword1"
@@ -81,10 +87,10 @@ const Login = (props) => {
           
              
          
-              <Link to="/selectmovies">
-              <button style ={{marginRight: 8}}type="submit" aria-pressed="true" className="btn btn-block btn-dark">
+              
+              <button style ={{marginRight: 8}} onClick={handleFormSubmit} type="submit" aria-pressed="true" className="btn btn-block btn-dark">
                 Login
-              </button> </Link>
+              </button>
               <br></br>
               <Link to="/signup">
               <button type="submit" aria-pressed="true" className="btn btn-block btn-dark">
