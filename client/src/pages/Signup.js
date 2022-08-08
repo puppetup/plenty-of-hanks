@@ -82,13 +82,15 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <br></br>
+                
+                <Link to="/selectmovies">
                 <button
                   className="btn btn-block btn-warning"
                   aria-pressed="true" style={{ cursor: 'pointer' }}
                   type="submit"
                 >
                   Sign Up
-                </button>
+                </button></Link>
               </form>
             )}
 
