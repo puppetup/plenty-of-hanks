@@ -22,14 +22,16 @@ const Login = (props) => {
   };
 
   // submit form
+  
   const handleFormSubmit = async (event) => {
+  debugger
     event.preventDefault();
     console.log(formState);
     try {
       const { data } = await login({
         variables: { ...formState },
       });
-
+  
       Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
@@ -59,12 +61,13 @@ const Login = (props) => {
               <Link to="/">back to the homepage.</Link>
             </p>
           ) : (
-            <form>
+            <form onSubmit={handleFormSubmit}>
               <div className="form-group bg-dark">
                 <input
                   type="email"
                   className="form-control"
                   id="exampleInputEmail1"
+                  onChange={handleChange}
                   aria-describedby="emailHelp"
                   placeholder="Enter email"
                 />
@@ -75,6 +78,7 @@ const Login = (props) => {
                   type="password"
                   className="form-control"
                   id="exampleInputPassword1"
+                  onChange={handleChange}
                   placeholder="Password"
                 />
               </div>
