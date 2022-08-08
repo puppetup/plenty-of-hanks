@@ -6,57 +6,90 @@
 //console.log(`Hi ${localStorageArr} is in localStorage.`);
 //temporary variables, to be replaced with array from topfive page
 //TODO: replace with previous page data from selection page
-const userTopFive_1 = [0, 1, 2, 3, 4, 9];
-const userTopFive_2 = [0, 1, 2, 3, 4];
-const userTopFive_3 = [0, 1, 2, 3, 4];
-const userTopFive_4 = [0, 1, 2, 3, 4];
-const userTopFive_5 = [0, 1, 2, 3, 4];
+const userTopFive_1 = [
+  "The Da Vinci Code (Series)",
+  "Forrest Gump",
+  "Toy Story (Series)",
+  "Captain Phillips",
+  "Apollo 13"
+];
 
 // This array will hold values from previous page of user top five.
 const CurrentLoggedinUser = [...userTopFive_1];
 
-const databaseTopFive_1 = [7, 1, 3, 2, 0];
-const databaseTopFive_2 = [0, 1, 2, 3, 4];
-const databaseTopFive_3 = [0, 1, 2, 3, 4];
-const databaseTopFive_4 = [0, 1, 2, 3, 4];
-const databaseTopFive_5 = [0, 1, 2, 3, 4];
+const marvin = [
+  "The Da Vinci Code (Series)",
+  "Forrest Gump",
+  "Toy Story (Series)",
+  "Captain Phillips",
+  "Apollo 13"
+];
+const jon = [
+  "Forrest Gump",
+  "Apollo 13",
+  "Captain Phillips",
+  "Catch Me if You Can",
+  "Sully"
+];
+const jordan = [
+  "The Green Mile",
+  "Big",
+  "Cast Away",
+  "Saving Private Ryan",
+  "Sleepless in Seattle"
+];
+const david = [
+  "Joe Vs The Volcano",
+  "Forrest Gump",
+  "Sleepless in Seattle",
+  "Big",
+  "That Thing You Do!"
+];
+const savino = [
+  "Forrest Gump",
+  "Sleepless in Seattle",
+  "Big",
+  "That Thing You Do!",
+  "Sully"
+];
 
 // This array will hold values from previous page of database top five.
-const databaseLoggedindatabase = [
-  ...databaseTopFive_1,
-  //   databaseTopFive_2,
-  //   databaseTopFive_3,
-  //   databaseTopFive_4,
-  //   databaseTopFive_5,
-];
+const databaseLoggedindatabase = [marvin, savino, jon, jordan, david];
 
 // Variable that Queries the database for top five arrays
 //Const allUser = { movies: []}
-console.log("hello");
 
 const userTopFiveCompare = () => {
-  console.log(CurrentLoggedinUser);
-  console.log(databaseLoggedindatabase);
-  
-  //   if (CurrentLoggedinUser.length !== databaseLoggedindatabase.length) {
-  //     console.log("checked length");
-  //     return false;
-  //   }
-  CurrentLoggedinUser.sort();
-  databaseLoggedindatabase.sort();
-  let foundMatches = 0;
+  // console.log(CurrentLoggedinUser);
+  // console.log(databaseLoggedindatabase);
 
-  for (let i = 0; i < CurrentLoggedinUser.length; i++) {
-    if (CurrentLoggedinUser[i] === databaseLoggedindatabase[i]) {
-      foundMatches++;
-    }
-  }
-  console.log(foundMatches / 5);
+  // CurrentLoggedinUser.sort();
+  // databaseLoggedindatabase.sort();
+  //let foundMatches = 0;
+
+  //for (let i = 0; i < CurrentLoggedinUser.length; i++) {
+  if (jon === marvin) {
+  //   //foundMatches++;
+  //   console.log("you matched with Marvin");
+  // } else if (userTopFive_1 === savino) {
+  //   //foundMatches++;
+  //   console.log("you matched with Savino");
+  // } else if (userTopFive_1 === jordan) {
+  //   //foundMatches++;
+  //   console.log("you matched with Jordan");
+  // } else if (userTopFive_1 === jon) {
+  //   //foundMatches++;
+  //   console.log("you matched with Jon");
+  // } else (userTopFive_1 === david)
+  // //foundMatches++;
+  // console.log(
+  //   "you matched with david....but he's married...so good luck out there"
+  // );
+
+  console.log("match");
   return true;
-
+  }
 };
-
-  
 
 //console.log(CurrentLoggedinUser)
 //      //for (var j = 0; j <5; j++) {
