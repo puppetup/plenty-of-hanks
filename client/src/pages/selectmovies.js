@@ -37,7 +37,7 @@ const SelectMovies = () => {
     }
 
     try {
-      const { data } = await saveMovie({
+      const response = await saveMovie({
         variables: { movie_id },
       });
 

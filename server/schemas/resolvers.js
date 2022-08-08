@@ -55,7 +55,7 @@ const resolvers = {
       if (context.user) {
         const updatedUser = await User.findByIdAndUpdate(
           { _id: context.user._id },
-          { $push: { movies: movie_id } },
+          { $addToSet: { movies: movie_id } },
           { new: true }
         );
 
