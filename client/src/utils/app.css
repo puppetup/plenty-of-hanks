@@ -28,7 +28,14 @@
     color: var(--thatorange);
 
 }
+.submition {
+    background-color: var(--bgdark);
+    color: var(--bgdark);
+}
 
+.match-container {
+    flex-wrap: wrap;
+}
 
 #loginbackground {
     background-color: #343a40;

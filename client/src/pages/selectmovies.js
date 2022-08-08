@@ -84,6 +84,11 @@ const SelectMovies = () => {
             );
           })}
         </CardColumns>
+        <Button
+          type='submit'
+          variant='success'>
+            Submit your Movie selection
+        </Button>
       </Container>
     </>
   );
