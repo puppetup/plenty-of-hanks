@@ -10,7 +10,7 @@ import {
 import { useQuery, useMutation } from '@apollo/client';
 import { getMovies } from '../utils/queries';
 import { SAVE_MOVIE } from '../utils/mutations';
-
+import {Link} from 'react-router-dom';
 
 
 import Auth from '../utils/auth';
@@ -85,6 +85,10 @@ const SelectMovies = () => {
           })}
         </CardColumns>
       </Container>
+      <Link to="/match">
+              <button type="submit" aria-pressed="true" className="btn btn-block btn-dark">
+                Reveal Your Matches
+              </button></Link>
     </>
   );
 };
