@@ -1,7 +1,9 @@
 import React from 'react';
-import {Container} from 'react-bootstrap';
+//import {Container} from 'react-bootstrap';
 // import { getMovies } from "../utils/mutations";
 //import { QUERY_ME } from "../utils/queries";
+
+
 
 
 const Match = ({ QUERY_ME }) => {
