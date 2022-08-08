@@ -22,8 +22,7 @@ const userSchema = new Schema(
     },
     movies: [
         {
-            type: Schema.Types.ObjectId,
-            ref: "Movie",
+            type: String
         }
     ]
     },
