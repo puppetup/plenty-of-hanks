@@ -26,9 +26,9 @@ const SelectMovies = () => {
 
   // event handling function that accepts the movie's mongo _id value as param and adds to user selection array
   const handleSelectMovie = async (e) => {
-    const movieId = e.target?.id
-    userSelections.push(movieId)
-    console.log(userSelections, e,movieId)
+    const movie_id = e.target?.id
+    userSelections.push(movie_id)
+    console.log(userSelections, e,movie_id)
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -38,7 +38,7 @@ const SelectMovies = () => {
 
     try {
       const { data } = await saveMovie({
-        variables: { movieId },
+        variables: { movie_id },
       });
 
       // upon success, remove book's id from localStorage
