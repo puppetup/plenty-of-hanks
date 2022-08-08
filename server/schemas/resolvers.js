@@ -8,6 +8,7 @@ const resolvers = {
     me: async (parent, args, context) => {
       if (context.user) {
       console.log(args) 
+      console.log(context)
       //const userData = await User.find({});
         const userData = await User.findOne({ _id: context.user._id }).populate('movies');
       console.log(userData);
