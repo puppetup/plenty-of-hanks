@@ -4,11 +4,11 @@
         "email": "rodri237@umn.edu",
         "password": "password123",
         "movies": [
-            "62eae0b61a844495dcc00e94",
-            "62eae0b61a844495dcc00e96",
-            "62eae0b61a844495dcc00e95",
-            "62eae0b61a844495dcc00e93",
-            "62ebf5b128c47a1155e2ce47"
+            "Joe Vs The Volcano",   
+            "Forrest Gump",
+            "Sleepless in Seattle",
+            "Big",
+            "That Thing You Do!"
         ]
     },
     {
@@ -16,11 +16,11 @@
         "email": "marvinsntglpz@gmail.com",
         "password": "password123",
         "movies": [
-            "62eae0b61a844495dcc00e9e",
-            "62eae0b61a844495dcc00e96",
-            "62eae0b61a844495dcc00e97",
-            "62eae0b61a844495dcc00ea0",
-            "62eae3b3a32b94ee69ee8771"
+            "The Da Vinci Code (Series",
+            "Forrest Gump",
+            "Toy Story (Series)",
+            "Captain Phillips",
+            "Apollo 13"
         ]
     },
     {
@@ -28,11 +28,11 @@
         "email": "schneringerj@gmail.com",
         "password": "password123",
         "movies": [
-            "62eae3b3a32b94ee69ee8766",
-            "62eae0b61a844495dcc00e93",
-            "62eae3b3a32b94ee69ee8767",
-            "62eae3b3a32b94ee69ee8765",
-            "62eae0b61a844495dcc00e95"
+            "The Green Mile",
+            "Big",  
+            "Cast Away",
+            "Saving Private Ryan",
+            "Sleepless in Seattle"
         ]
     },
     {
@@ -40,11 +40,11 @@
         "email": "jonheng@gmail.com",
         "password": "password123",
         "movies": [
-            "62eae0b61a844495dcc00e96",
-            "62eae3b3a32b94ee69ee8771",
-            "62eae0b61a844495dcc00ea0",
-            "62eae3b3a32b94ee69ee8768",
-            "62eae3b3a32b94ee69ee876e"
+            "Forrest Gump",
+            "Apollo 13",
+            "Captain Phillips",
+            "Catch Me if You Can",
+            "Sully"
         ]
     },
     {
@@ -52,11 +52,11 @@
         "email": "savinohoshizaki@gmail.com",
         "password": "password123",
         "movies": [
-            "62eae0b61a844495dcc00e94",
-            "62eae0b61a844495dcc00e96",
-            "62eae0b61a844495dcc00e95",
-            "62eae0b61a844495dcc00e93",
-            "62eae0b61a844495dcc00e98"
+            "Big",
+            "Apollo 13",
+            "Forrest Gump",
+            "Sleepless in Seattle",
+            "The Green Mile"
         ]
     }
 ]
