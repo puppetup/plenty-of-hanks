@@ -24,7 +24,6 @@ const Login = (props) => {
   // submit form
   
   const handleFormSubmit = async (event) => {
-  debugger
     event.preventDefault();
     console.log(formState);
     try {
