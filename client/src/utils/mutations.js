@@ -28,6 +28,7 @@ export const SAVE_MOVIE = gql`
 mutation SaveMovie($movie_id: String!) {
   saveMovie(movie_id: $movie_id) {
     movies 
+
   }
 }
 `;
