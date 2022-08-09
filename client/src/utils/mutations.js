@@ -25,12 +25,9 @@ export const ADD_USER = gql`
 `;
 
 export const SAVE_MOVIE = gql`
-mutation SaveMovie($movieId: ID!) {
-  saveMovie(movie_id: $movieId) {
-    movies {
-      movieName
-      _id
-    }
+mutation SaveMovie($movie_id: ID!) {
+  saveMovie(movie_id: $movie_id) {
+    movies
   }
 }
 `;
