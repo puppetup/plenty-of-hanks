@@ -1,4 +1,16 @@
-
+[
+    {
+        "username": "David",
+        "email": "rodri237@umn.edu",
+        "password": "password123",
+        "movies": [
+            "Joe Vs The Volcano",
+            "Forrest Gump",
+            "Sleepless in Seattle",
+            "Big",
+            "That Thing You Do!"
+        ]
+    },
     {
         "username": "Marvin",
         "email": "marvinsntglpz@gmail.com",
@@ -11,7 +23,18 @@
             "Apollo 13"
         ]
     },
-
+    {
+        "username": "Jordan",
+        "email": "schneringerj@gmail.com",
+        "password": "password123",
+        "movies": [
+            "The Green Mile",
+            "Big",
+            "Cast Away",
+            "Saving Private Ryan",
+            "Sleepless in Seattle"
+        ]
+    },
     {
         "username": "Jon",
         "email": "jonheng@gmail.com",
