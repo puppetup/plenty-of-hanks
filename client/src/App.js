@@ -10,7 +10,7 @@ import { setContext } from '@apollo/client/link/context';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import SelectMovies from './pages/selectmovies';
-import TopFiveOrder from './pages/topfiveorder';
+
 import Navbar from './components/Navbar';
 import Match from './pages/match';
 import './utils/app.css'
@@ -59,10 +59,6 @@ function App() {
               <Route 
               path='/selectMovies' 
               element={<SelectMovies />} 
-              />
-              <Route 
-              path='/topFive' 
-              element={<TopFiveOrder />} 
               />
               <Route 
               path='/match'

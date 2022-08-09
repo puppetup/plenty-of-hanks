@@ -1,4 +1,3 @@
-
 ## Plenty-of-Hanks - Dating, Make Friends & Meet New People
 
 Plenty-of-Hanks is an online dating and showbiz networking application. This App is rated R for every singleton（18+） should give it and try. In Plenty-of-Hanks, users choose their top 5 favorite Tom Hanks movies to match their personalized Hanks.
