@@ -59,7 +59,7 @@ const Login = (props) => {
               <Link to="/">back to the homepage.</Link>
             </p>
           ) : (
-            <form>
+            <form  onSubmit={handleFormSubmit}>
               <div className="form-group bg-dark">
                 <input
                   type="email"
